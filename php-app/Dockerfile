@@ -1,21 +1,14 @@
-FROM registry.access.redhat.com/ubi8/php-80
+FROM ubi9/php-80
 
-# Add application sources
-ADD src .
+# Add application sources to a directory that the assemble script expects them
+# and set permissions so that the container runs without root access
+USER 0
+ADD src /tmp/src
+RUN chown -R 1001:0 /tmp/src
+USER 1001
 
 # Install the dependencies
-RUN TEMPFILE=$(mktemp) && \
-    curl -o "$TEMPFILE" "https://getcomposer.org/installer" && \
-    php <"$TEMPFILE" && \
-    ./composer.phar install --no-interaction --no-ansi --optimize-autoloader
+RUN /usr/libexec/s2i/assemble
 
-# Run script uses standard ways to configure the PHP application
-# and execs httpd -D FOREGROUND at the end
-# See more in <version>/s2i/bin/run in this repository.
-# Shortly what the run script does: The httpd daemon and php needs to be
-# configured, so this script prepares the configuration based on the container
-# parameters (e.g. available memory) and puts the configuration files into
-# the approriate places.
-# This can obviously be done differently, and in that case, the final CMD
-# should be set to "CMD httpd -D FOREGROUND" instead.
+# Set the default command for the resulting image
 CMD /usr/libexec/s2i/run
