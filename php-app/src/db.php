@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 /*
 Author: VINEET KUMAR
  */
@@ -9,7 +12,6 @@ define('DB_USERNAME',getenv('MYSQL_USERNAME'));
 define('DB_PASSWORD',getenv('MYSQL_PASSWORD'));
 define('DB_HOST',getenv('MYSQL_HOST'));
 define('DB_PORT',getenv('MYSQL_PORT'));
-echo DB_HOST
 #$port = getenv('MYSQL_PORT');
 #$db   = $_ENV['MYSQL_USERNAME'];
 #$username = getenv('MYSQL_USERNAME');
