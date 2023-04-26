@@ -14,10 +14,10 @@ Author: VINEET KUMAR
 // #define('DB_PORT',getenv('MYSQL_PORT'));
 // define('DB_DATABASE',getenv('MYSQL_DATABASE'));
 
-$db_hostname = parse_url(getenv('MYSQL_HOST'));
-$db_user = parse_url(getenv('MYSQL_USERNAME'));
-$db_password = parse_url(getenv('MYSQL_PASSWORD'));
-$db_database = parse_url(getenv('MYSQL_DATABASE'));
+$db_hostname = getenv('MYSQL_HOST');
+$db_user = getenv('MYSQL_USERNAME');
+$db_password = getenv('MYSQL_PASSWORD');
+$db_database = getenv('MYSQL_DATABASE');
 #$host = GETENV('MYSQL_HOST');
 #$port = getenv('MYSQL_PORT');
 #$db   = $_ENV['MYSQL_USERNAME'];
