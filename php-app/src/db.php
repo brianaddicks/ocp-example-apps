@@ -13,10 +13,6 @@ define('DB_PASSWORD',getenv('MYSQL_PASSWORD'));
 define('DB_HOST',getenv('MYSQL_HOST'));
 #define('DB_PORT',getenv('MYSQL_PORT'));
 define('DB_DATABASE',getenv('MYSQL_DATABASE'));
-echo DB_USERNAME;
-echo DB_PASSWORD;
-echo DB_HOST;
-echo DB_DATABASE;
 #$host = GETENV('MYSQL_HOST');
 #$port = getenv('MYSQL_PORT');
 #$db   = $_ENV['MYSQL_USERNAME'];
@@ -29,6 +25,6 @@ $con = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 // Check connection
 if (mysqli_connect_errno())
   {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  echo "Failed to connect to MySQL: " . mysqli_connect_error() . DB_HOST;
 }
 ?>
