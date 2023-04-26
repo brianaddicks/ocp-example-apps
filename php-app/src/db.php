@@ -11,8 +11,12 @@ Author: VINEET KUMAR
 define('DB_USERNAME',getenv('MYSQL_USERNAME'));
 define('DB_PASSWORD',getenv('MYSQL_PASSWORD'));
 define('DB_HOST',getenv('MYSQL_HOST'));
-define('DB_PORT',getenv('MYSQL_PORT'));
+#define('DB_PORT',getenv('MYSQL_PORT'));
 define('DB_DATABASE',getenv('MYSQL_DATABASE'));
+echo DB_USERNAME;
+echo DB_PASSWORD;
+echo DB_HOST;
+echo DB_DATABASE;
 #$host = GETENV('MYSQL_HOST');
 #$port = getenv('MYSQL_PORT');
 #$db   = $_ENV['MYSQL_USERNAME'];
