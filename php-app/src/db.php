@@ -9,8 +9,7 @@ define('DB_USERNAME',getenv('MYSQL_USERNAME'));
 define('DB_PASSWORD',getenv('MYSQL_PASSWORD'));
 define('DB_HOST',getenv('MYSQL_HOST'));
 define('DB_PORT',getenv('MYSQL_PORT'));
-define('DB_DATABASE',getenv('MYSQL_DATABASE'));
-#$host = GETENV('MYSQL_HOST');
+echo DB_HOST
 #$port = getenv('MYSQL_PORT');
 #$db   = $_ENV['MYSQL_USERNAME'];
 #$username = getenv('MYSQL_USERNAME');
