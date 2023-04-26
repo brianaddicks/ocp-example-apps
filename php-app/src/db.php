@@ -14,7 +14,7 @@ Author: VINEET KUMAR
 // #define('DB_PORT',getenv('MYSQL_PORT'));
 // define('DB_DATABASE',getenv('MYSQL_DATABASE'));
 
-$db_hostname = getenv('MYSQL_HOST');
+$db_hostname = getenv('MYSQL_HOST', true);
 $db_user = getenv('MYSQL_USERNAME');
 $db_password = getenv('MYSQL_PASSWORD');
 $db_database = getenv('MYSQL_DATABASE');
