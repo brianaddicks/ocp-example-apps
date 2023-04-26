@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/php-81
+FROM registry.access.redhat.com/ubi8/php-80
 
 # Add application sources
 ADD src .
