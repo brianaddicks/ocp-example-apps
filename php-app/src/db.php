@@ -25,6 +25,7 @@ $db_database = getenv('MYSQL_DATABASE');
 #echo $username;
 #$password = getenv('MYSQL_PASSWORD');
 #echo $host."<\br>".$db."<\br>".DB_USERNAME."<\br>".$password;
+var_dump( get_defined_vars() );
 $con = mysqli_connect($db_hostname,$db_user,$db_password,$db_database);
 #$con = mysqli_connect(localhost,tests,tests,register);
 // Check connection
