@@ -26,10 +26,6 @@ $con = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 #$con = mysqli_connect(localhost,tests,tests,register);
 // Check connection
 if (mysqli_connect_errno()) {
-    echo "MYSQL_HOST " . $db_hostname;
-    echo "MYSQL_USERNAME " . $db_user;
-    echo "MYSQL_PASSWORD " . $db_password;
-    echo "MYSQL_DATABASE " . $db_database;
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 ?>
