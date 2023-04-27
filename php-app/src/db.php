@@ -8,7 +8,7 @@ Author: VINEET KUMAR
 # var_dump(getenv('MY_ENVVAR'));
 # $admin = getenv("mysql_db_name");
 #    echo $admin;
-define('DB_USERNAME',getenv('MYSQL_USERNAME'));
+define('DB_USERNAME',getenv('MYSQL_USER'));
 define('DB_PASSWORD',getenv('MYSQL_PASSWORD'));
 define('DB_HOST',getenv('MYSQL_HOST'));
 #define('DB_PORT',getenv('MYSQL_PORT'));
